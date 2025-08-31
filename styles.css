@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.18rem;
+    background: url('images/jardins-flores.jpg') center/cover no-repeat fixed;
+    color: #215436;
+}
+
+header {
+    width: 100vw;
+    background: linear-gradient(90deg, #288944 70%, #276b2f 100%);
+    color: #fff;
+    padding: 0 2vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    min-height: 74px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 18px #0002;
+}
+
+.logo {
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    margin-right: 2vw;
+}
+
+nav {
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid transparent;
+    transition: color .16s, border-bottom .13s;
+    cursor: pointer;
+    font-size: 1.08em;
+}
+nav a:hover,
+nav a:focus {
+    color: #b0f3aa;
+    border-bottom: 2.5px solid #81efa6;
+}
+
+.menubtn {
+    display: none;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2.1rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+main {
+    margin-top: 90px;
+}
+
+.banner {
+    min-height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h1 {
+    color: #22703d;
+    font-size: 2.6rem;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    text-align: center;
+    background: rgba(255,255,255,0.93);
+    border-radius: 20px;
+    box-shadow: 0 2px 16px #225b214c;
+    padding: 32px 5vw;
+    border: 2.5px solid #65cc87;
+    max-width: 90vw;
+    margin: 30px auto 0 auto;
+}
+
+.caixa {
+    background: rgba(255,255,255, 0.97);
+    max-width: 1100px;
+    margin: 40px auto 32px auto;
+    padding: 37px 44px 32px 44px;
+    border-radius: 26px;
+    box-shadow: 0 8px 36px 2px #1d402640;
+    border: 2.8px solid #8cdfaf;
+    font-size: 1.19rem;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    transition: box-shadow 0.13s;
+    position: relative;
+}
+.caixa:focus-within, .caixa:hover {
+    box-shadow: 0 12px 44px 8px #44a86928;
+    outline: none;
+}
+
+.caixa h2 {
+    color: #219150;
+    font-size: 2.1em;
+    margin-left: 0px;
+    font-weight: 800;
+    margin-top: 0;
+    border-left: 8px solid #67fe8b;
+    padding-left: 20px;
+    line-height: 1.09em;
+    margin-bottom: 17px;
+    letter-spacing: -1px;
+}
+
+.caixa ul, .caixa ol {
+    padding-left: 34px;
+    margin-bottom: 20px;
+    font-size: 1.13em;
+}
+
+.caixa h3 {
+    margin-top: 29px;
+    font-size: 1.13em;
+    color: #218f52;
+    font-weight: 800;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.servico {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    background: #ecfff7;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px #96fab720;
+    border: 2px solid #a3f8ca;
+    padding: 10px 7px 12px 7px;
+    margin-right: 8px;
+    transition: box-shadow .18s, transform .16s;
+}
+.servico:hover, .servico:focus-within {
+    box-shadow: 0 4px 22px 1px #7deaad48;
+    transform: translateY(-4px) scale(1.04);
+}
+.servico img {
+    border-radius: 12px;
+    width: 215px;
+    height: 125px;
+    object-fit: cover;
+    box-shadow: 0 2px 10px #627a5453;
+    margin-bottom: 12px;
+    border: 1.6px solid #a0eca9;
+    background: #fafefb;
+}
+.servico span {
+    color: #1d8e53;
+    font-size: 1.1em;
+    padding: 4px 8px 0 8px;
+    font-weight: 600;
+    text-align: center;
+    min-height: 32px;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 13px 12px;
+    margin-bottom: 18px;
+    border-radius: 11px;
+    border: 2px solid #42ba79;
+    font-size: 1.1em;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    background: #f6fff9;
+    color: #1e5333;
+}
+.contato-form textarea {
+    min-height: 86px;
+    max-width: 100%;
+    resize: vertical;
+}
+.contato-form button {
+    background: #37cc5e;
+    color: #fff;
+    border: none;
+    padding: 14px 46px;
+    border-radius: 11px;
+    cursor: pointer;
+    font-size: 1.13em;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    box-shadow: 0 2px 10px #87fda65c;
+    letter-spacing: .6px;
+    transition: background 0.17s,transform .13s;
+}
+.contato-form button:hover {
+    background: #25924c;
+    transform: scale(1.05);
+}
+
+footer {
+    background: #218045;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 20px 0;
+    margin-top: 26px;
+    border-radius: 18px 18px 0 0;
+    border-top: 2.5px solid #b5ffde;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1200px){
+    .caixa { max-width:97vw; padding:27px 2vw; }
+    .galeria { gap:20px; }
+    .servico img {width:38vw; max-width:215px;}
+    .servico {width:40vw; max-width:230px;}
+    .banner h1 {font-size:2em;}
+}
+@media (max-width: 900px) {
+    header {font-size:1.05em;}
+    .banner h1 {font-size: 1.3rem; padding: 16px 5px;}
+    .caixa {padding: 14px 2vw;}
+    .galeria { gap:10px;}
+    .servico img {width:86vw;max-width:97vw;}
+    .servico {width:90vw;max-width:310px;}
+}
+@media (max-width: 760px) {
+    nav { 
+        flex-direction: column;
+        background: #71db8b;
+        position: absolute;
+        right: 0; top: 74px;
+        min-width: 160px;
+        display: none;
+        font-size:1.13em;
+        border-radius: 0 0 0 16px;
+        border-left: 2px solid #73ffb6;
+        z-index: 22;
+    }
+    .menubtn { display: block;}
+    main {margin-top:100px;}
+    .caixa {font-size: 1em;}
+    .servico {width:98vw;}
+    .banner h1 {font-size: 1rem;}
+}
+@media (max-width: 500px) {
+    header {min-height:54px;}
+    .logo {font-size: 1.22rem;}
+    .banner h1 {font-size: 0.92rem;}
+    .caixa {padding: 7px 1vw;}
+    .servico img {width:90vw;height:68px;max-width:90vw;}
+    .servico {width:97vw;}
+}
+
+::-webkit-scrollbar-thumb {background:#6de47b;border-radius:17px;}
+::-webkit-scrollbar{width:8px;}
+/* Botão WhatsApp Flutuante */
+.whatsapp-float {
+    position: fixed;
+    width: 62px;
+    height: 62px;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1500;
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s;
+}
+.whatsapp-float:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+.whatsapp-float img {
+    width: 38px;
+    height: 38px;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+}
+
+
